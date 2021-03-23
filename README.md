@@ -5,40 +5,41 @@ In this project, we try to capture user intention to churn (which means cancelli
 
 ## Introduction
 In order to get better efficiency, we apply pyspark, which is a Spark API designed for Python as our framework. In our analysis, we follow the pipeline as follows:
-- Data cleaning 
-- Exploratory data analysis
-- Feature engineering
-- Modeling
-- Evaluation
+- Data cleaning (Dropduplicate and remove null)
+- Exploratory data analysis (Population and churned user group exploration)
+- Feature engineering (Create user based features using activity logs)
+- Modeling (Three candidates chosen, with paramgrid and crossvalidator for tuning hyper parameter)
+- Evaluation (accuracy, recall, precision and f1_score)
 
 
 ## Dataset
 In this notebook, we use a subset of the full dataset for modeling. The schema of this dataframe is as below.
 ```
-|-- artist: string (nullable = true) <br>
-|-- auth: string (nullable = true) <br>
-|-- firstName: string (nullable = true) <br>
-|-- gender: string (nullable = true) <br>
-|-- itemInSession: long (nullable = true) <br>
-|-- lastName: string (nullable = true) <br>
-|-- length: double (nullable = true) <br>
-|-- level: string (nullable = true) <br>
-|-- location: string (nullable = true) <br>
-|-- method: string (nullable = true) <br>
-|-- page: string (nullable = true) <br>
-|-- registration: long (nullable = true) <br>
-|-- sessionId: long (nullable = true) <br>
-|-- song: string (nullable = true) <br>
-|-- status: long (nullable = true) <br>
-|-- ts: long (nullable = true) <br>
-|-- userAgent: string (nullable = true) <br>
-|-- userId: string (nullable = true) <br>
+|-- artist: string (nullable = true) 
+|-- auth: string (nullable = true) 
+|-- firstName: string (nullable = true) 
+|-- gender: string (nullable = true) 
+|-- itemInSession: long (nullable = true) 
+|-- lastName: string (nullable = true) 
+|-- length: double (nullable = true) 
+|-- level: string (nullable = true) 
+|-- location: string (nullable = true) 
+|-- method: string (nullable = true) 
+|-- page: string (nullable = true) 
+|-- registration: long (nullable = true) 
+|-- sessionId: long (nullable = true) 
+|-- song: string (nullable = true) 
+|-- status: long (nullable = true) 
+|-- ts: long (nullable = true) 
+|-- userAgent: string (nullable = true) 
+|-- userId: string (nullable = true) 
 ```
 ## Libraries Used
-- pyspark
-- pandas
-- matplotlib
-- seaborn
+- re (Regular Expression)
+- pyspark (Spark interface for Python)
+- pandas (Dataframe manipulation)
+- matplotlib (Plotting)
+- seaborn (Advanced Plotting)
 
 ## Files and Folders
 - mini_sparkify_event_data.json (Subset of dataset for modeling)
@@ -49,5 +50,4 @@ In this notebook, we use a subset of the full dataset for modeling. The schema o
 
 
 ## Acknowledgement
-
-This is repository for Sparkify project 
+Special thank to Udacity for providing the dataset and training for skills required to complete this project
