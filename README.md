@@ -56,3 +56,4 @@ Below is the result of three classifer predcting test set and whole set.
 
 ## Acknowledgement
 Special thank to Udacity for providing the dataset and training for skills required to complete this project
+Blog Post can be found here: https://burgercewu.medium.com/never-lose-any-one-sparkify-user-churn-prediction-challenge-using-pyspark-7ab67ac080d4
