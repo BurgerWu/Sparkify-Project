@@ -1,6 +1,9 @@
 # Sparkify-Project
 ![image](images/sparkify.JPG)
 
+Blog Post of this project can be found at <br>
+https://burgercewu.medium.com/never-lose-any-one-sparkify-user-churn-prediction-challenge-using-pyspark-7ab67ac080d4
+
 ## Motivation
 In this project, we try to capture user intention to churn (which means cancelling the whole service) using user activity log from Sparkify, a company providing music service. Our goal is to predict whether a usr is at risk of churning is critical for company providing services nowadays. If we could accurately predict potentially churning users, we could provide promotion or special offer to those users to have them turn their mind.
 
