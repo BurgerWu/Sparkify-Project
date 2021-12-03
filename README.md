@@ -51,11 +51,14 @@ In this notebook, we use a subset of the full dataset for modeling. The schema o
 - Sparkify.html (HTML for the Notebook)
 
 ## Summary
-We have to first deal with dataset imbalance problem aftre data preprocessing. We create sub_dataset with fairly reasonable positive and negative label ratio before heading to modeling. After modeling of our three candidate (Logistic Regression, Random Forest and Gradient-Boosted Tree), we finally get decent performance of classification on our test set with accuracy and f1_scroe close to 0.75. Subsequently, we predict with the whole dataset and found that the performance drop a lot. We think that data size is a major issue because with hundreds of user data our analysis will not be representative of the population.
+We have to first deal with dataset imbalance problem aftre data preprocessing. We create sub_dataset with fairly reasonable positive and negative label ratio before heading to modeling either by randomly sampling negative samples or bootstrapping positive samples. After modeling of our three candidate (Logistic Regression, Random Forest and Gradient-Boosted Tree), we get decent performance of around 0.6 f1 score on both test and entire set using randomly sampling negative samples balancing method. However when we choose to apply bootstrap positive samples, though the data to handle would be much larger, the results also get better. F1 score can reach close to 0.9 even for entire dataset. Through comparison between three candidate algorithms, we also discover that tree-based algorithms seem to work better on this application. 
 
-Below is the result of three classifer predcting test set and whole set.
+Below is the result of three classifer predcting test set and whole set using different balancing method.
+- Randomly sampling negative samples
+![image](images/result_neg.png)
 
-![image](images/METRIC.JPG)
+- Bootstrapping positive samples
+![image](images/results_pos.png)
 
 ## Acknowledgement
 Special thank to Udacity for providing the dataset and training for skills required to complete this project
